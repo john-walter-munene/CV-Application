@@ -1,0 +1,104 @@
+.resume-view-unit {
+    background-color: rgb(5, 56, 56);
+    width: 80%;
+    margin: 0 auto;
+    color: azure;
+}
+
+.name {
+    padding-top: 15px;
+    margin-bottom: 20px;
+}
+
+.general-information {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+.general-information p {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.career-profile {
+     display: flex;
+     flex-direction: column;
+     gap: 5px;
+}
+
+.career-profile > * {
+    margin: 0 40px;
+}
+
+.career-profile h2 {
+    align-self: flex-start;
+}
+
+.career-profile p {
+    font-size: 20px;
+    text-align: justify;
+    margin-bottom: 25px;
+}
+
+.education-summary,
+.professional-experience {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+    height: auto;
+    margin-left: 40px;
+    margin-bottom: 35px;
+}
+
+.education-summary > *,
+.professional-experience > * {
+    margin: 0;
+}
+
+.education-summary h3,
+.education-summary p,
+.professional-experience p {
+    margin-left: 20px;
+}
+
+.education-summary h2,
+.professional-experience h2 {
+    font-size: 1.5em;
+}
+
+.education-summary p,
+.professional-experience p {
+    font-size: 20px;
+    text-align: justify;
+}
+
+.professional-experience p {
+    margin-bottom: 10px;
+}
+
+.professional-experience .overview {
+    margin-right: 50px;
+}
+
+.professional-experience ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: justify;
+    margin: 0 100px 50px 40px;
+}
+
+.professional-experience ul li {
+    font-size: 18px;
+    margin-bottom: 5px;
+    list-style-type: disc;
+}
+
+.toggler {
+    margin-top: 10px;
+}

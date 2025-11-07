@@ -1,5 +1,3 @@
-import { buildTimeFlexboxer } from "../../utils/utilities";
-
 function GeneralInformation({ myResume, onResumeDataChange }) {
 
   const handleChange = (e) => {
@@ -13,10 +11,10 @@ function GeneralInformation({ myResume, onResumeDataChange }) {
   };
 
   return (
-    <div>
+    <div className="data-general-information">
       <h2>General Information</h2>
 
-      <form style={buildTimeFlexboxer}>
+      <form >
         <input type="text" name="name" placeholder="Full Name" value={myResume.name} onChange={handleChange} />
         <input type="number" name="mobileOne" placeholder="First Mobile" value={myResume.mobileOne} onChange={handleChange} />
         <input type="number" name="mobileTwo" placeholder="Second Mobile" value={myResume.mobileTwo} onChange={handleChange} />

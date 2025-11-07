@@ -1,11 +1,17 @@
 import { useState } from 'react';
+
+// Styling and schema handlers.
+import '../styles/data-collection.css'
+import '../styles/final-display.css'
 import { resumeSchema, schemerFlattener, schemaNormalizer } from '../assets/resume-schema';
 
+// Final Display components.
 import { ResumeHeader } from './Final Display/Header';
 import { CareerProfile } from './Final Display/CareerProfile';
 import { Education } from './Final Display/EducationalExperience';
 import { ProfessionalWork } from './Final Display/ProfessionalExperience';
 
+// Data Collection Unit components
 import { DataCollectionHeader } from './Data Collection/DataCollectionHeader';
 import { GeneralInformation } from './Data Collection/GeneralInformation';
 import { CareerSummary } from './Data Collection/CareerProfiler';
@@ -17,8 +23,6 @@ const flattenedResumeSchema = schemerFlattener(resumeSchema);
 function ResumeApp() {
   const [myResume, setMyResume] = useState(flattenedResumeSchema);
   const [currentMode, setCurrentMode] = useState("data-collection");
-
-  // setMyResume(schemerFlattener(resumeData));
 
   // Check if all form fields are filled to allow submissions. 
   const isFormComplete = Object.values(myResume).every(
@@ -48,14 +52,14 @@ function ResumeApp() {
       ) : (
         <ResumeAppViewer resumeDataInfo={normalizedResume} />)}
 
-      <button onClick={handleToggleMode}>{modeTogglerButtonText}</button>
+      <button className='toggler' onClick={handleToggleMode}>{modeTogglerButtonText}</button>
     </div>
   );
 }
 
 function DataCollectionUnit({ myResume, onResumeDataChange }) {
   return (
-    <div>
+    <div className='data-collection-unit'>
       <DataCollectionHeader myResume={myResume} onResumeDataChange={onResumeDataChange} />
       <GeneralInformation myResume={myResume} onResumeDataChange={onResumeDataChange} />
       <CareerSummary myResume={myResume} onResumeDataChange={onResumeDataChange} />
@@ -69,7 +73,7 @@ function ResumeAppViewer({ resumeDataInfo }) {
   const { header, careerProfile, education, workExperience } = resumeDataInfo;
 
   return (
-    <div>
+    <div className='resume-view-unit'>
       <ResumeHeader headerData={header} />
       <CareerProfile profile={careerProfile} />
       <Education educationInfo={education} />
