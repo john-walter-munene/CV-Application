@@ -1,5 +1,5 @@
 function CareerProfile({ profile }) {
-    return (<div>
+    return (<div className="career-profile">
         <h2>Career Profile</h2>
 
         <p>{profile}</p>

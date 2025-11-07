@@ -1,5 +1,3 @@
-import { textAreaStyles } from "../../utils/utilities";
-
 function CareerSummary({ myResume, onResumeDataChange }) {
 
     const handleChange = (event) => {
@@ -12,12 +10,11 @@ function CareerSummary({ myResume, onResumeDataChange }) {
         }));
     }
 
-    return (<div>
+    return (<div className="data-career-profile">
         <h2>Career Profile</h2>
 
-        <textarea placeholder="Add a summary of your career ambitions, and goals" style={textAreaStyles}
-            value={myResume.careerProfile} onChange={handleChange}
-            />
+        <textarea placeholder="Add a summary of your career ambitions, and goals"
+            value={myResume.careerProfile} onChange={handleChange} />
     </div>);
 }
 
