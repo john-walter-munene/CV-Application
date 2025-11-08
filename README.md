@@ -3,7 +3,7 @@
 A dynamic CV builder built with React, inspired by [The Odin Project's React curriculum](https://www.theodinproject.com/lessons/node-path-react-new-cv-application).  
 Users can input personal information, education, and work experience — and see the CV update live as they type, but only preview once they have filled all the form data.
 
-**Live Demo:** [View on Vercel]()
+**Live Demo:** [View on Vercel](https://john-walter-cv-application.vercel.app/)
 
 ---
 
